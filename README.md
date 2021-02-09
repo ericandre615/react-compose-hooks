@@ -8,7 +8,9 @@ you to pass your hooks to your component. It also allows your hooks to `compose`
 and by attaching what is returned from each hook to the overall `props` that are 
 passed to the next hook.
 
-Note there is also a `compose.d.ts` file that has typings for `composeHooks`
+Note there is also a `compose.d.ts` file that has typings for `composeHooks` so
+that you can use this package withing a TypeScript project without any additional 
+dependencies for `@types`.
 
 ### Basic Usage
 The `compose` function takes in an arbitrary amount of React `hooks` or you could just

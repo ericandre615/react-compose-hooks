@@ -1,7 +1,7 @@
 {
   "name": "compose-hooks-react",
-  "version": "1.1.1",
-  "description": "",
+  "version": "1.1.2",
+  "description": "Compose React hooks together and decouple them from your components",
   "main": "build/compose.js",
   "types": "src/compose.d.ts",
   "scripts": {
@@ -11,8 +11,13 @@
     "postinstall": "npm run build",
     "prepublish": "npm run build"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["react", "hooks", "compose", "decouple", "test"],
+  "author": "Eric Andre<ericandre615@gmail.com>",
+  "homepage": "https://github.com/ericandre615/react-compose-hooks/blob/main/README.md",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ericandre615/react-compose-hooks"
+  },
   "license": "ISC",
   "peerDependencies": {
     "react": ">= 16.8"

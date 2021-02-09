@@ -8,7 +8,6 @@
     "test": "jest src",
     "test:watch": "jest src --watch",
     "build": "babel src/compose.js --out-file build/compose.js",
-    "postinstall": "npm run build",
     "prepublish": "npm run build"
   },
   "keywords": ["react", "hooks", "compose", "decouple", "test"],

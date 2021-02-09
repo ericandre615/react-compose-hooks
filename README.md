@@ -12,6 +12,10 @@ Note there is also a `compose.d.ts` file that has typings for `composeHooks` so
 that you can use this package withing a TypeScript project without any additional 
 dependencies for `@types`.
 
+### Install
+`npm install compose-hooks-react`
+Yes, the name is different from the repo because the name was taken on NPM.
+
 ### Basic Usage
 The `compose` function takes in an arbitrary amount of React `hooks` or you could just
 use any `functions` you want. It calls them from left-to-right/top-to-bottom.

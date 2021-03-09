@@ -2,19 +2,20 @@
 
 React hooks are nice. They solve some issues with functional components like
 using state and lifecycle methods. However, they also tend to tightly couple
-hooks to React components. This leads to less composability of components, 
-more difficulty and complexity in unit testing components. This library allows
+hooks to React components. This leads to less composability of components and 
+more difficulty/complexity in unit testing components. This library allows
 you to pass your hooks to your component. It also allows your hooks to `compose`
 and by attaching what is returned from each hook to the overall `props` that are 
 passed to the next hook.
 
 Note there is also a `compose.d.ts` file that has typings for `composeHooks` so
-that you can use this package withing a TypeScript project without any additional 
+that you can use this package within a TypeScript project without any additional 
 dependencies for `@types`.
 
 ### Install
 `npm install compose-hooks-react`
-Yes, the name is different from the repo because the name was taken on NPM.
+
+_Yes, the name is different from the repo because the name was taken on NPM._
 
 ### Basic Usage
 The `compose` function takes in an arbitrary amount of React `hooks` or you could just
@@ -33,7 +34,7 @@ const useLastName = () => ({ lastName: 'Pivens' });
 const useFullName = props => ({ fullName: `Sir ${props.useFirstName} ${props.lastName}` });
 
 export const TestComponent = ({ fullName }) => (<p>Hello, { fullName }</p>);
-export const Composed = compose(
+export const Composed = composeHooks(
   useFirstName,
   useLastName,
   useFullName,
@@ -53,7 +54,7 @@ must be passed into compose in an order were the output will be piped to the nex
 If we changed the above code to
 
 ```js
-export const Composed = compose(
+export const Composed = composeHooks(
   useFullName,
   useFirstName,
   useLastName,
